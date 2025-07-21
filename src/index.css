@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Inter-M";
+  src: url(assets/fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Inter-R";
+  src: url(assets/fonts/Inter-Regular.ttf);
+}
+
+@theme {
+  --color-dark: #0c0c0c;
+  --color-dark-text: #0c0c0db3;
+  --color-light: #f6f8fdd9;
+  --color-light-text: #f1f4f9;
+}
+
+body {
+  font-family: "Inter-R";
+}
+
+@utility scrollbar-hidden {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
