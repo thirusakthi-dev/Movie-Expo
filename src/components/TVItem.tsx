@@ -1,15 +1,15 @@
-import React, { useState, useEffect, act } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { Movie, Cast, Crew, Video, Reviews } from "../utils/Interfaces";
 import {
-  getTVShowDetail,
   getCastTVDetails,
-  getTVVideos,
-  getTVReviews,
   getTVRecommendations,
+  getTVReviews,
+  getTVShowDetail,
+  getTVVideos,
 } from "../utils/API";
-import RecommendationsTab from "./MovieTab";
+import type { Cast, Crew, Movie, Reviews, Video } from "../utils/Interfaces";
 import MovieReview from "./Movie/MovieReview";
+import RecommendationsTab from "./MovieTab";
 
 const TVItem = () => {
   const { id } = useParams<{ id: string }>();

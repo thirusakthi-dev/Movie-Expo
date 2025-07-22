@@ -1,7 +1,6 @@
-import React from "react";
-import Home from "./components/Home";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import MovieItem from "./components/MovieItem";
 import TVItem from "./components/TVItem";
 

@@ -1,14 +1,15 @@
-import Header from "./Header";
 import {
-  getTopMovies,
-  getPopularMovies,
   getNowPlaying,
+  getPopularMovies,
+  getTopMovies,
   todayTrend,
 } from "../utils/API";
-import TopRated from "./MovieTab";
-import PopularMovies from "./MovieTab";
-import OnRunning from "./MovieTab";
-import DayTrending from "./MovieTab";
+import {
+  default as DayTrending,
+  default as OnRunning,
+  default as PopularMovies,
+  default as TopRated,
+} from "./MovieTab";
 
 const Home = () => {
   return (

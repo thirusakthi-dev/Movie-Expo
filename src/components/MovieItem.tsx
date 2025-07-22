@@ -1,17 +1,14 @@
-import React, { useState, useEffect, act } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { Movie, Cast, Crew, Video, Reviews } from "../utils/Interfaces";
-import {
-  getMovieData,
-  getCastMovieDetails,
-  getMovieVideos,
-  getMovieReviews,
-  getTVRecommendations,
-  getMovieRecommendations,
-} from "../utils/API";
-import DefaultUser from "../assets/images/dummy-user.png";
-import { format, formatDistanceToNow } from "date-fns";
 import RecommendationsTab from "../components/MovieTab";
+import {
+  getCastMovieDetails,
+  getMovieData,
+  getMovieRecommendations,
+  getMovieReviews,
+  getMovieVideos,
+} from "../utils/API";
+import type { Cast, Crew, Movie, Reviews, Video } from "../utils/Interfaces";
 import MovieReview from "./Movie/MovieReview";
 
 const MovieItem = () => {
@@ -21,11 +18,6 @@ const MovieItem = () => {
   const [director, setDirector] = useState<Crew | null>(null);
   const [videos, setVideos] = useState<Video[]>([]);
   const [reviews, setReviews] = useState<Reviews[]>([]);
-  const [showFull, setShowFull] = useState(false);
-
-  const toggleShow = () => {
-    setShowFull((prev) => !prev);
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);

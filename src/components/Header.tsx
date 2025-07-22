@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import SiteLogoLight from "../assets/images/site-logo-light.png";
-import SiteLogoDark from "../assets/images/site-logo-dark.png";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DarkIcon from "../assets/images/dark.png";
 import LightIcon from "../assets/images/light.png";
 import EmptyPoster from "../assets/images/placeholder-poster.jpg";
-import { getSearch } from "../utils/API";
-import { useNavigate } from "react-router-dom";
+import SiteLogoDark from "../assets/images/site-logo-dark.png";
+import SiteLogoLight from "../assets/images/site-logo-light.png";
 import useDarkMode from "../hooks/useDarkMode";
+import { getSearch } from "../utils/API";
 
 interface ISearch {
   id: number;

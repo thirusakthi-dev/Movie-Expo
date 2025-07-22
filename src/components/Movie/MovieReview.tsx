@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import type { Reviews } from "../../utils/Interfaces";
-import DefaultUser from "../../assets/images/dummy-user.png";
 import { format, formatDistanceToNow } from "date-fns";
+import { useState } from "react";
+import DefaultUser from "../../assets/images/dummy-user.png";
+import type { Reviews } from "../../utils/Interfaces";
 
 interface MovieReviewProps {
   reviews: Reviews[];
